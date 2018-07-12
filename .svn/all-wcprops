@@ -1,0 +1,167 @@
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/brAthena/brAthena/!svn/ver/516/trunk
+END
+dbghelp.dll
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/brAthena/brAthena/!svn/ver/4/trunk/dbghelp.dll
+END
+login-server.bat
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/brAthena/brAthena/!svn/ver/1/trunk/login-server.bat
+END
+configure
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/brAthena/brAthena/!svn/ver/258/trunk/configure
+END
+Makefile.in
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/brAthena/brAthena/!svn/ver/251/trunk/Makefile.in
+END
+LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/brAthena/brAthena/!svn/ver/1/trunk/LICENSE
+END
+serv.bat
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/brAthena/brAthena/!svn/ver/1/trunk/serv.bat
+END
+login-server.sh
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/brAthena/brAthena/!svn/ver/1/trunk/login-server.sh
+END
+configure.in
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/brAthena/brAthena/!svn/ver/258/trunk/configure.in
+END
+char-server.bat
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/brAthena/brAthena/!svn/ver/1/trunk/char-server.bat
+END
+map-server.bat
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/brAthena/brAthena/!svn/ver/1/trunk/map-server.bat
+END
+pcre3.dll
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/brAthena/brAthena/!svn/ver/4/trunk/pcre3.dll
+END
+char-server.sh
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/brAthena/brAthena/!svn/ver/1/trunk/char-server.sh
+END
+map-server.sh
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/brAthena/brAthena/!svn/ver/1/trunk/map-server.sh
+END
+athena-start
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/brAthena/brAthena/!svn/ver/211/trunk/athena-start
+END
+zlib1.dll
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/brAthena/brAthena/!svn/ver/4/trunk/zlib1.dll
+END
+README.md
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/brAthena/brAthena/!svn/ver/503/trunk/README.md
+END
+brAthena-10.sln
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/brAthena/brAthena/!svn/ver/225/trunk/brAthena-10.sln
+END
+sysinfogen.sh
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/brAthena/brAthena/!svn/ver/211/trunk/sysinfogen.sh
+END
+brAthena-12.sln
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/brAthena/brAthena/!svn/ver/225/trunk/brAthena-12.sln
+END
+brAthena-14.sln
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/brAthena/brAthena/!svn/ver/225/trunk/brAthena-14.sln
+END
+mac.start.scpt
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/brAthena/brAthena/!svn/ver/1/trunk/mac.start.scpt
+END
+.gitignore
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/brAthena/brAthena/!svn/ver/236/trunk/.gitignore
+END
+libmysql.dll
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/brAthena/brAthena/!svn/ver/4/trunk/libmysql.dll
+END
+script-checker
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/brAthena/brAthena/!svn/ver/22/trunk/script-checker
+END
+.gitattributes
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/brAthena/brAthena/!svn/ver/1/trunk/.gitattributes
+END
+script-checker.bat
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/brAthena/brAthena/!svn/ver/22/trunk/script-checker.bat
+END
+run-server.bat
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/brAthena/brAthena/!svn/ver/1/trunk/run-server.bat
+END

@@ -1,0 +1,779 @@
+// 				CRIADO POR : ---------													\\
+//				Adição de 3ª Classe : RapiiDz											\\
+//												forum: Cronus Emulator					\\
+//_______________________________________________________________________________________\\
+//																						 \\
+//				Direitos autorais : RapiiDz												 \\
+//																						 \\
+//						Qualquer Bug ou Erro mande PM no Cronus Emulator				 \\
+//_______________________________________________________________________________________\\
+//																						 \\
+//				Nao divulgue em qualquer outro Forum/site 								 \\
+//																						 \\
+//_______________________________Configurações do NPC está no Final______________________\\
+
+
+prontera,152,182,5	script	Meste das Classes 3rd	4_F_02,{
+
+mes $@nome$;
+if(Class > 4007 && Class < 4023 || Class > 4046 && Class < 4050 || Class > 4029 && Class < 4046 || Class == 4045 || Class > 4054 && Class < 40108){
+mes "Não posso fazer nada por você.";
+close;
+}
+set BaseLevel,BaseLevel+$@level;
+mes "Olá ^0000CD"+strcharinfo(0)+"^000000";
+mes "Gostaria de mudar de classe?";
+next;
+menu "Sim, por favor.",-,"Não, obrigado.",nao;
+next;
+mes $@nome$;
+mes "Tudo bem,";
+mes "Escolha qual classe";
+mes "Deseja se tornar:";
+next;
+switch(select("- Classes Normais:- Classes 3rd:- 3rd Baby's:- Nenhuma, obrigado"))
+{
+case 1:
+next;
+menu "- Algoz",algoz,"- Desordeiro",desordeiro,"- Menestrel/Cigana",menestrel,"- Mestre",mestre,"- Mestre-ferreiro",mestreferreiro,"- Atirador de Elite",atirador,"- Criador",criador,"- Arquimago",arquimago,"- Lorde",lorde,"- Paladino",paladino,"- Sumo Sacerdote",sumo,"- Professor",professor,"- Cavaleiro",cavaleiro,"- Mercenário",mercenario,"- Arruaceiro",arruaceiro,"- Monge",monge,"-Próximo",-;
+next;
+menu "- Ferreiro",ferreiro,"- Alquimista",alquimista,"-Templário",templario,"- Caçador",cacador,"- Sábio",sabio,"- Bruxo",bruxo,"- Bardo/Odalisca",bardo,"- Sacerdote",sacerdote,"- Taekwon",taekwon,"- Mestre Taekwon",mestretaekwon,"- Espiritualista",espiritualista,"- Justiceiro",justiceiro,"- Ninja",ninja,"- Super Aprendiz",superaprendiz,"-Próximo",-;
+next;
+menu "- Baby Alquimista",babyalquimista,"- Baby Bardo/Odalisca",babybardo,"- Baby Arruaceiro",babyarruaceiro,"- Baby Sábio",babysabio,"- Baby Templário",babytemplario,"- Baby Ferreiro",babyferreiro,"- Baby Caçador",babycacador,"- Baby Bruxo",babybruxo,"- Baby Monge",babymonge,"- Baby Cavaleiro",babycavaleiro,"- Baby Mercenário",babymercenario,"- Baby Sacerdote",babysacerdote,"- Baby Mercador",babymercador,"- Baby Arqueiro",babyarqueiro,"- Baby Aprendiz",babyaprendiz,"- Super Bebê",babysuperaprendiz,"- Baby Espadachim",babyEspadachim,"- Baby Gatuno",babygatuno,"- Baby Mago",babymago,"- Baby Noviço",babynovico,"Nenhum, obrigado.",nao;
+
+cavaleiro:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Cavaleira!";
+if(Sex == 1)mes "Parabéns, você agora é um Cavaleiro!";
+jobchange 7;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+skill 1001,1,0;
+close;
+
+
+mercenario:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Mercenária!";
+if(Sex == 1)mes "Parabéns, você agora é um Mercenário!";
+jobchange 12;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+skill 1003,1,0;
+skill 1004,1,0;
+close;
+
+
+bruxo:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Bruxa!";
+if(Sex == 1)mes "Parabéns, você agora é um Bruxo!";
+jobchange 9;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+skill 1006,1,0;
+close;
+
+
+cacador:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Caçadora!";
+if(Sex == 1)mes "Parabéns, você agora é um Caçador!";
+jobchange 11;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+skill 1009,1,0;
+close;
+
+
+sacerdote:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Sacerdotisa!";
+if(Sex == 1)mes "Parabéns, você agora é um Sacerdote!";
+jobchange 8;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+skill 1014,1,0;
+close;
+
+
+ferreiro:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Ferreira!";
+if(Sex == 1)mes "Parabéns, você agora é um Ferreiro!";
+jobchange 10;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+skill 1012,1,0;
+skill 1013,1,0;
+close;
+
+templario:
+next;
+if(Sex == 0)mes "Parabéns, você agora é uma Templária!";
+if(Sex == 1)mes "Parabéns, você agora é um Cavaleiro!";
+jobchange 14;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+skill 1002,1,0;
+close;
+
+
+arruaceiro:
+next;
+if(Sex == 0)mes "Parabéns, você agora é uma Arruaceira!";
+if(Sex == 1)mes "Parabéns, você agora é um Arruaceiro!";
+jobchange 17;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+skill 1005,1,0;
+close;
+
+monge:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Monja!";
+if(Sex == 1)mes "Parabéns, você agora é um Monge!";
+jobchange 15;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+skill 1015,1,0;
+skill 1016,1,0;
+close;
+
+alquimista:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Alquimista!";
+if(Sex == 1)mes "Parabéns, você agora é um Alquimista!";
+jobchange 18;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+skill 238,1,0;
+skill 243,1,0;
+skill 244,1,0;
+skill 247,1,0;
+close;
+
+sabio:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Sábia!";
+if(Sex == 1)mes "Parabéns, você agora é um Sábio!";
+jobchange 16;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+skill 1007,1,0;
+close;
+
+bardo:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Odalisca!";
+if(Sex == 1)mes "Parabéns, você agora é um Bardo!";
+jobchange 19;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+skill 1010,1,0;
+close;
+
+algoz:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Algoz!";
+if(Sex == 1)mes "Parabéns, você agora é um Algoz!";
+jobchange 4013;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+desordeiro:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Desordeira!";
+if(Sex == 1)mes "Parabéns, você agora é um Desordeiro!";
+jobchange 4018;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+menestrel:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Cigana!";
+if(Sex == 1)mes "Parabéns, você agora é um Menestrel!";
+jobchange 4021;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+mestre:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Mestra!";
+if(Sex == 1)mes "Parabéns, você agora é um Mestra!";
+jobchange 4016;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+criador:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Criadora!";
+if(Sex == 1)mes "Parabéns, você agora é um Criador!";
+jobchange 4019;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+lorde:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Lady!";
+if(Sex == 1)mes "Parabéns, você agora é um Lorde!";
+jobchange 4008;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+paladino:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Paladina!";
+if(Sex == 1)mes "Parabéns, você agora é um Paladino!";
+jobchange 4015;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+mestreferreiro:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Mestre-Ferreira!";
+if(Sex == 1)mes "Parabéns, você agora é um Mestre-Ferreiro!";
+jobchange 4011;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+atirador:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Atidarora de Elite!";
+if(Sex == 1)mes "Parabéns, você agora é um Atirador de Elite!";
+jobchange 4012;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+sumo:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Sumo-Sacerdotiza!";
+if(Sex == 1)mes "Parabéns, você agora é um Sumo-Sacerdote!";
+jobchange 4009;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+arquimago:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Arquimaga!";
+if(Sex == 1)mes "Parabéns, você agora é um Arquimago!";
+jobchange 4010;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+professor:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Professora!";
+if(Sex == 1)mes "Parabéns, você agora é um Professor!";
+jobchange 4017;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+babyEspadachim:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Baby Espadashin!";
+if(Sex == 1)mes "Parabéns, você agora é um Baby Espadashin!";
+jobchange 2024;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+babygatuno:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Baby Gatuna!";
+if(Sex == 1)mes "Parabéns, você agora é um Baby Gatuno!";
+jobchange 4029;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+babymago:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Baby maga!";
+if(Sex == 1)mes "Parabéns, você agora é um Baby Mago!";
+jobchange 4025;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+skill 1010,1,0;
+close;
+
+babynovico:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Baby Noviça!";
+if(Sex == 1)mes "Parabéns, você agora é um Baby Noviço!";
+jobchange 4027;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+babymercador:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Baby Mercadora!";
+if(Sex == 1)mes "Parabéns, você agora é um Baby Mercador!";
+jobchange 4028;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+skill 1010,1,0;
+close;
+
+babyarqueiro:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Baby Arqueira!";
+if(Sex == 1)mes "Parabéns, você agora é um Baby Arqueiro!";
+jobchange 4026;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+babyaprendiz:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Aprendiz!";
+if(Sex == 1)mes "Parabéns, você agora é um Aprendiz!";
+jobchange 4023;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+babysuperaprendiz:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Baby Super Aprendiz!";
+if(Sex == 1)mes "Parabéns, você agora é um Baby Super Aprendiz!";
+jobchange 4045;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+babycavaleiro:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Baby Cavaleira!";
+if(Sex == 1)mes "Parabéns, você agora é um Baby Cavaleiro!";
+jobchange 4030;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+babymercenario:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Baby Mercenaria!";
+if(Sex == 1)mes "Parabéns, você agora é um Baby Mercenario!";
+jobchange 4035;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+skill 1010,1,0;
+close;
+
+babysacerdote:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Baby Sacerdotiza!";
+if(Sex == 1)mes "Parabéns, você agora é um Baby Sacerdote!";
+jobchange 4031;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+babyferreiro:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Baby Ferreira!";
+if(Sex == 1)mes "Parabéns, você agora é um Baby Ferreiro!";
+jobchange 4033;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+babycacador:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Baby Caçadora!";
+if(Sex == 1)mes "Parabéns, você agora é um Baby Caçador!";
+jobchange 4034;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+babybruxo:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Baby Bruxa!";
+if(Sex == 1)mes "Parabéns, você agora é um Baby Bruxo!";
+jobchange 4032;
+skill 1010,1,0;
+close;
+
+babymonge:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Baby Monja!";
+if(Sex == 1)mes "Parabéns, você agora é um Monge!";
+jobchange 4038;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+babyalquimista:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Baby Alquimista!";
+if(Sex == 1)mes "Parabéns, você agora é um Baby Alquimista!";
+jobchange 4041;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+babybardo:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Baby Odalisca!";
+if(Sex == 1)mes "Parabéns, você agora é um Baby Bardo!";
+jobchange 4042;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+babyarruaceiro:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Baby Arruaceira!";
+if(Sex == 1)mes "Parabéns, você agora é um Baby Arruaceiro!";
+jobchange 4040;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+babysabio:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Baby Sabia!";
+if(Sex == 1)mes "Parabéns, você agora é um Baby Sabio!";
+jobchange 4039;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+babytemplario:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Baby Templaria!";
+if(Sex == 1)mes "Parabéns, você agora é um baby Templario!";
+jobchange 4037;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+taekwon:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Taekwon!";
+if(Sex == 1)mes "Parabéns, você agora é um Taekwon!";
+jobchange 4046;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+mestretaekwon:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Mestra Taekwon!";
+if(Sex == 1)mes "Parabéns, você agora é um Mestre Taekwon!";
+jobchange 4047;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+espiritualista:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Espiritualista!";
+if(Sex == 1)mes "Parabéns, você agora é um Espiritualista!";
+jobchange 4049;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+justiceiro:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Justiceira!";
+if(Sex == 1)mes "Parabéns, você agora é um Justiceiro!";
+jobchange 24;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+ninja:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Ninja!";
+if(Sex == 1)mes "Parabéns, você agora é um Ninja!";
+jobchange 25;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+superaprendiz:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Super Aprendiz!";
+if(Sex == 1)mes "Parabéns, você agora é um Super Aprendiz!";
+jobchange 23;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+case 2:
+next;
+menu "- Rune Cavaleiro",rcavaleiro,"- Arcano",arcano,"- Sentinela",sentinela,"- Arcebispo",arcebispo,"- Mecânico",mecanico,"- Guillotine Cross",cross,"- Guardião Real",guardiao,"- Feiticeiro",feiticeiro,"- Trovador",trovador,"- Shura",shura,"- Bioquímico",bio,"- Renegado",renegado;
+next;
+
+rcavaleiro:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Cavaleira!";
+if(Sex == 1)mes "Parabéns, você agora é um Cavaleiro!";
+jobchange 4054;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+
+arcano:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Arcana!";
+if(Sex == 1)mes "Parabéns, você agora é um Arcano!";
+jobchange 4055;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+sentinela:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Sentinela!";
+if(Sex == 1)mes "Parabéns, você agora é um Sentinela!";
+jobchange 4056;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+
+arcebispo:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Arcebispa!";
+if(Sex == 1)mes "Parabéns, você agora é um Arcebispo!";
+jobchange 4057;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+
+mecanico:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Mecânica!";
+if(Sex == 1)mes "Parabéns, você agora é um Mecânico!";
+jobchange 4058;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+cross:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Guillotine Cross!";
+if(Sex == 1)mes "Parabéns, você agora é um Guillotine Cross!";
+jobchange 4059;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+
+guardiao:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Guardiã Real!";
+if(Sex == 1)mes "Parabéns, você agora é um Guardião Real!";
+jobchange 4066;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+
+feiticeiro:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Feiticeira!";
+if(Sex == 1)mes "Parabéns, você agora é um Feiticeiro!";
+jobchange 4067;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+
+trovador:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Trovadora!";
+if(Sex == 1)mes "Parabéns, você agora é um Trovador!";
+jobchange 4068;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+
+shura:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Shura!";
+if(Sex == 1)mes "Parabéns, você agora é um Shura!";
+jobchange 4070;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+
+bio:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Bioquimica!";
+if(Sex == 1)mes "Parabéns, você agora é um Bioquimico!";
+jobchange 4071;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+
+renegado:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Renegada!";
+if(Sex == 1)mes "Parabéns, você agora é um Renegado!";
+jobchange 4072;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+case 3:
+next;
+menu "- Baby Cavaleiro",bcavaleiro,"- Baby Arcano",barcano,"- Baby Sentinela",bsentinela,"- Baby Arcebispo",barcebispo,"- Baby Mecânico",bmecanico,"- Baby Guillotine Cross",bcross,"- Baby Guardião Real",bguardiao,"- Baby Feiticeiro",bfeiticeiro,"- Baby Trovador",btrovador,"- Baby Shura",bshura,"- Baby Bioquímico",bbio,"- Baby Renegado",brenegado;
+next;
+
+bcavaleiro:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Baby Caveleira!";
+if(Sex == 1)mes "Parabéns, você agora é um Baby Cavaleiro!";
+jobchange 4096;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+barcano:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Baby Arcana!";
+if(Sex == 1)mes "Parabéns, você agora é um Baby Arcano!";
+jobchange 4097;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+bsentinela:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Baby Sentinela!";
+if(Sex == 1)mes "Parabéns, você agora é um Baby Sentinela!";
+jobchange 4098;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+barcebispo:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Baby Arcebispa!";
+if(Sex == 1)mes "Parabéns, você agora é um Baby Arcebispa!";
+jobchange 4099;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+bmecanico:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Baby Mecânica!";
+if(Sex == 1)mes "Parabéns, você agora é um Baby Mecânico!";
+jobchange 4100;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+bcross:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Baby Guillotine Cross!";
+if(Sex == 1)mes "Parabéns, você agora é um Baby Guillotine Cross!";
+jobchange 4101;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+bguardiao:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Baby Guardiã Real!";
+if(Sex == 1)mes "Parabéns, você agora é um Baby Guardião Real!";
+jobchange 4102;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+bfeiticeiro:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Baby Feiticeira!";
+if(Sex == 1)mes "Parabéns, você agora é um Baby Feiticeiro!";
+jobchange 4103;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+btrovador:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Baby Trovadora!";
+if(Sex == 1)mes "Parabéns, você agora é um Baby Trovador!";
+jobchange 4104;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+bshura:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Baby Shura!";
+if(Sex == 1)mes "Parabéns, você agora é um Baby Shura!";
+jobchange 4106;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+bbio:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Baby Bioquimica!";
+if(Sex == 1)mes "Parabéns, você agora é um Baby Bioquimico!";
+jobchange 4107;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+brenegado:
+next;
+mes $@nome$;
+if(Sex == 0)mes "Parabéns, você agora é uma Baby Renegada!";
+if(Sex == 1)mes "Parabéns, você agora é um Baby Renegado!";
+jobchange 4108;
+atcommand "@allskill"; set JobLevel,JobLevel+$@job;
+close;
+
+case 4:
+next;
+mes $@nome$;
+mes "Ok, volte quando precisar !";
+close;
+}
+
+nao:
+next;
+mes $@nome$;
+mes "Tudo bem,";
+mes "Estarei esperando.";
+close;
+
+
+//Configurações do NPC.
+OnInit:
+set $@needpoint,0; // -- Sem Necessidade -- \\
+set $@needequip,0; // -- Sem Necessidade -- \\
+set $@needzeny,0; // -- Sem Necessidade -- \\
+set $@questskill,0; // -- Sem Necessidade -- \\
+set $@nome$,"[^FF8000Mestra das Classes^000000]"; // Nome do NPC que vai aparecer 
+set $@level,999; // Edita o Level Base do seu sever
+set $@job,500; // Edita o nivel JOB do seu sever
+end;
+}
