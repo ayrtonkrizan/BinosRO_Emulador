@@ -9492,6 +9492,78 @@ ACMD(unban_mac)
 	return true;
 }
 
+//***** Funcoes criadas por Ayrton Krizan *****//
+ACMD(move) {
+	int town = INT_MAX; // Initialized to INT_MAX instead of -1 to avoid conflicts with those who map [-3:-1] to @memo locations.
+	char map_name[MAP_NAME_LENGTH];
+
+	const struct {
+		char map[MAP_NAME_LENGTH];
+		int x, y;
+		int min_match; ///< Minimum string length to match
+	} data[] = {
+		{ "prt_sewb3", 180, 170, 8 }, //  Esgoto
+	};
+
+	memset(map_name, '\0', sizeof(map_name));
+	memset(atcmd_output, '\0', sizeof(atcmd_output));
+
+	if (!*message || sscanf(message, "%11s", map_name) < 1) {
+		// no value matched so send the list of locations
+		const char* text;
+
+		// attempt to find the text help string
+		text = atcommand_help_string(info);
+
+		clif->message(fd, msg_fd(fd, 38)); // Invalid location number, or name.
+
+		if (text) { // send the text to the client
+			clif->messageln(fd, text);
+		}
+
+		return false;
+	}
+
+	if (town < 0 || town >= ARRAYLENGTH(data)) {
+		int i;
+		map_name[MAP_NAME_LENGTH - 1] = '\0';
+
+		// Match maps on the list
+		for (i = 0; i < ARRAYLENGTH(data); i++) {
+			if (strncmpi(map_name, data[i].map, data[i].min_match) == 0) {
+				town = i;
+				break;
+			}
+		}
+	}
+
+	if (town >= 0 && town < ARRAYLENGTH(data)) {
+		int16 m = map->mapname2mapid(data[town].map);
+		if (m >= 0 && map->list[m].flag.nowarpto && !pc_has_permission(sd, PC_PERM_WARP_ANYWHERE)) {
+			clif->message(fd, msg_fd(fd, 247));
+			return false;
+		}
+		if (sd->bl.m >= 0 && map->list[sd->bl.m].flag.nowarp && !pc_has_permission(sd, PC_PERM_WARP_ANYWHERE)) {
+			clif->message(fd, msg_fd(fd, 248));
+			return false;
+		}
+		if (pc->setpos(sd, mapindex->name2id(data[town].map), data[town].x, data[town].y, CLR_TELEPORT) == 0) {
+			clif->message(fd, msg_fd(fd, 0)); // Warped.
+		}
+		else {
+			clif->message(fd, msg_fd(fd, 1)); // Map not found.
+			return false;
+		}
+	}
+	else {
+		clif->message(fd, msg_fd(fd, 38)); // Invalid location number or name.
+		return false;
+	}
+
+	return true;
+}
+
+
 /**
  * Fills the reference of available commands in atcommand DBMap
  **/
@@ -9770,6 +9842,9 @@ void atcommand_basecommands(void) {
 		// [CarlosHenrq] Sistema de ban por mac
 		ACMD_DEF(ban_mac),
 		ACMD_DEF(unban_mac),
+
+		// [AyrtonKrizan] Sistema de warp sem teletransportadora e sem @warp
+		ACMD_DEF(move),
 	};
 	int i;
 
