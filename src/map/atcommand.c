@@ -9500,9 +9500,164 @@ ACMD(move) {
 	const struct {
 		char map[MAP_NAME_LENGTH];
 		int x, y;
-		int min_match; ///< Minimum string length to match
+		int group_min;// Minimo de grupo permitido para o warp 
+		//int min_match; ///< Minimum string length to match
 	} data[] = {
-		{ "prt_sewb3", 180, 170, 8 }, //  Esgoto
+		///### Dungeons
+		{ "prt_sewb1", 132, 248, 0 },
+		{ "prt_sewb2", 19, 15, 0 },
+		{ "prt_sewb3", 180, 170, 0 },
+		{ "prt_sewb4", 100, 92, 10 },// (Besouro-Ladrão Dourado)
+		  
+		{ "pay_dun00", 21, 183, 0 },
+		{ "pay_dun01", 18, 33, 0 },
+		{ "pay_dun02", 19, 63, 0 },
+		{ "pay_dun03", 155, 158, 0 },
+		{ "pay_dun04", 43, 40, 10 },  //(Flor do Luar)
+		
+		{ "tur_dun01", 157, 37, 0 },
+		{ "tur_dun02", 167, 23, 0 },
+		{ "tur_dun03", 132, 189, 0 },
+		{ "tur_dun04", 100, 192, 10 }, //(General Tartaruga)
+		  
+		{ "xmas_fild01", 84, 51, 10 }, //(Hatii)
+		  
+		{ "xmas_dun01", 205, 16, 0 },
+		{ "xmas_dun02", 133, 130, 10 }, //(Cavaleiro da Tempestade)
+		  
+		{ "odin_tem01", 96, 146, 0 },
+		{ "odin_tem02", 27, 334, 0 },
+		{ "odin_tem03", 247, 37, 10 },// (Valkyrie Randgris)
+		  
+		{ "anthell01", 37, 362, 0 },
+		{ "anthell02", 169, 170, 10 },// (Maya)
+		  
+		{ "ama_dun01", 229, 11, 0 },
+		{ "ama_dun02", 33, 40, 0 },
+		{ "ama_dun03", 120, 12, 10 },  //(Samurai Encarnado)
+		  
+		{ "gef_dun00", 104, 199, 0 },
+		{ "gef_dun01", 115, 236, 0 },
+		{ "gef_dun02", 106, 131, 10 },// (Doppelganger)
+		  
+		{ "gon_dun01", 153, 48, 0 },
+		{ "gon_dun02", 17, 113, 0 },
+		{ "gon_dun03", 67, 9, 0 },// (Serpente Suprema)
+		  
+		{ "ein_dun01", 22, 13, 0 },
+		{ "ein_dun02", 291, 292, 10 }, //(RSX-0806)
+		  
+		{ "gefenia01", 223, 256, 0 },
+		{ "gefenia02", 240, 23, 0 },
+		{ "gefenia03", 58, 29, 0 },
+		{ "gefenia04", 284, 95, 0 },
+		  
+		{ "mjo_dun01", 52, 17, 0 },
+		{ "mjo_dun02", 381, 343, 0 },
+		{ "mjo_dun03", 305, 261, 0 },
+		  
+		{ "ice_dun01", 157, 13, 0 },
+		{ "ice_dun02", 151, 139, 0 },
+		{ "ice_dun03", 149, 21, 10 },// (Ktullanux)
+		  
+		{ "juperos_01", 53, 248, 0 },
+		{ "juperos_02", 34, 62, 0 },
+		{ "jupe_core", 149, 286, 10 },// (Vesper)
+		  
+		{ "prt_maze01", 48, 104, 0 },
+		{ "prt_maze02", 93, 19, 0 },
+		{ "prt_maze03", 182, 88, 10 },// (Bafomé)
+		  
+		{ "lou_dun01", 218, 195, 0 },
+		{ "lou_dun02", 285, 18, 0 },
+		{ "lou_dun03", 165, 38, 10 },// (Bacosjin)
+		  
+		{ "mag_dun01", 126, 69, 0 },
+		{ "mag_dun02", 47, 30, 0 },
+		  
+		{ "kh_dun01", 3, 231, 0 },
+		{ "kh_dun02", 41, 196, 10 },// (Kiel D-01)
+		  
+		{ "orcsdun01", 32, 169, 0 },
+		{ "orcsdun02", 21, 185, 0 },
+		  
+		{ "iz_dun00", 168, 169, 0 },
+		{ "iz_dun01", 253, 253, 0 },
+		{ "iz_dun02", 236, 204, 0 },
+		{ "iz_dun03", 34, 64, 0 },
+		{ "iz_dun04", 26, 29, 0 },
+		  
+		{ "in_sphinx1", 288, 8, 0 },
+		{ "in_sphinx2", 149, 81, 0 },
+		{ "in_sphinx3", 210, 54, 0 },
+		{ "in_sphinx4", 10, 222, 0 },
+		{ "in_sphinx5", 99, 100, 10 }, //(Faraó)
+		  
+		{ "treasure01", 69, 24, 0 },
+		{ "treasure02", 102, 26, 10 },// (Drake)
+		  
+		{ "ra_san01", 140, 19, 0 },
+		{ "ra_san02", 287, 149, 0 },
+		{ "ra_san03", 119, 283, 0 },
+		{ "ra_san04", 119, 101, 0 },
+		{ "ra_san05", 150, 9, 10 }, //(Pesar Noturno)
+		  
+		{ "moc_pryd01", 192, 9, 0 },
+		{ "moc_pryd02", 10, 192, 0 },
+		{ "moc_pryd03", 100, 93, 0 },
+		{ "moc_pryd04", 181, 11, 10 }, //(Osiris)
+		  
+		{ "moc_pryd05", 93, 96, 0 },
+		{ "moc_pryd06", 194, 10, 10 },// (AmonRá)
+		  
+		{ "um_dun01", 42, 29, 0 },
+		{ "um_dun02", 52, 22, 0 },
+		  
+		{ "thor_v01", 21, 229, 0 },
+		{ "thor_v02", 77, 203, 0 },
+		{ "thor_v03", 34, 261, 10 },// (Ifrit)
+		  
+		/*{ "tha_t01", 0 },
+		{ "tha_t02", 0 },
+		{ "tha_t03", 0 },
+		{ "tha_t04", 0 },
+		{ "tha_t05", 0 },
+		{ "tha_t06", 0 },
+		{ "tha_t07", 0 },
+		{ "tha_t08", 0 },
+		{ "tha_t09", 0 },
+		{ "tha_t10", 0 },
+		{ "tha_t11", 0 },
+		{ "tha_t12", 0 },
+		  
+		{ "nyd_dun01", 0 },
+		{ "nyd_dun02", 0 },
+		{ "1@nyd", 0 },
+		{ "2@nyd", 10 },// (Sombra de Niddhogur)
+		*/  
+		{ "gl_chyard", 147, 15, 10 },// (Dark Lord)
+		{ "gl_church", 156, 8, 0 },
+		{ "gl_knt01", 150, 10, 0 },
+		{ "gl_knt02", 15, 140, 0 },
+		{ "gl_cas01", 200, 22, 0 },
+		{ "gl_cas02", 104, 18, 0 },
+		{ "gl_prison", 14, 70, 0 },
+		{ "gl_prison", 150, 13, 0 },
+		{ "gl_sew01", 258, 255, 0 },
+		{ "gl_sew02", 30, 269, 0 },
+		{ "gl_sew03", 172, 283, 0 },
+		{ "gl_sew04", 68, 277, 0 },
+		{ "gl_dun01", 134, 274, 0 },
+		{ "gl_dun02", 224, 274, 0 },
+		  
+		{ "mosk_dun01", 189, 45, 0 },
+		{ "mosk_dun02", 165, 29, 0 },
+		{ "mosk_dun03", 31, 133, 10 }, //(MVP DRAGAO N SEI O NOME)
+		  
+		{ "lhz_dun01", 144, 9, 0 },
+		{ "lhz_dun02", 183, 138, 0 },
+		{ "lhz_dun03", 140, 133, 10 }, //(MVP PUTASSO)
+
 	};
 
 	memset(map_name, '\0', sizeof(map_name));
@@ -9530,7 +9685,7 @@ ACMD(move) {
 
 		// Match maps on the list
 		for (i = 0; i < ARRAYLENGTH(data); i++) {
-			if (strncmpi(map_name, data[i].map, data[i].min_match) == 0) {
+			if (strcmpi(map_name, data[i].map) == 0) {
 				town = i;
 				break;
 			}
