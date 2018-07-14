@@ -9503,6 +9503,202 @@ ACMD(move) {
 		int group_min;// Minimo de grupo permitido para o warp 
 		//int min_match; ///< Minimum string length to match
 	} data[] = {
+		///### Cities
+		// Amatsu
+		{ "ama_fild01", 190, 197, 1 },
+
+		//Ayothaya
+		{ "ayo_fild01", 173, 134, 1 },
+		{ "ayo_fild02", 212, 150, 1 },
+
+		//Comodo
+		{ "cmd_fild01", 180, 178, 1 },
+		{ "cmd_fild02", 231, 160, 1 },
+		{ "cmd_fild03", 191, 172, 1 },
+		{ "cmd_fild04", 228, 194, 1 },
+		{ "cmd_fild05", 224, 203, 1 },
+		{ "cmd_fild06", 190, 223, 1 },
+		{ "cmd_fild07", 234, 177, 1 },
+		{ "cmd_fild08", 194, 175, 1 },
+		{ "cmd_fild09", 172, 172, 1 },
+
+		//Einbroch
+		{ "ein_fild01", 142, 225, 1 },
+		{ "ein_fild02", 182, 141, 1 },
+		{ "ein_fild03", 187, 228, 1 },
+		{ "ein_fild04", 185, 173, 1 },
+		{ "ein_fild05", 216, 173, 1 },
+		{ "ein_fild06", 195, 148, 1 },
+		{ "ein_fild07", 272, 220, 1 },
+		{ "ein_fild08", 173, 214, 1 },
+		{ "ein_fild09", 207, 174, 1 },
+		{ "ein_fild10", 196, 200, 1 },
+
+		//Geffen
+		{ "gef_fild01", 46, 199, 1 },
+		{ "gef_fild02", 213, 204, 1 },
+		{ "gef_fild03", 195, 212, 1 },
+		{ "gef_fild04", 257, 192, 1 },
+		{ "gef_fild05", 188, 171, 1 },
+		{ "gef_fild06", 166, 263, 1 },
+		{ "gef_fild07", 248, 158, 1 },
+		{ "gef_fild08", 195, 191, 1 },
+		{ "gef_fild09", 186, 183, 1 },
+		{ "gef_fild10", 221, 117, 1 },
+		{ "gef_fild11", 178, 218, 1 },
+		{ "gef_fild12", 136, 328, 1 },
+		{ "gef_fild13", 240, 181, 1 },
+		{ "gef_fild14", 235, 235, 1 },
+		{ "gef_fild15", 211, 185, 1 },
+
+		//Gondun
+		{ "gon_fild01", 220, 227, 1 },
+
+		//Huriel
+		{ "hu_fild01", 268, 101, 1 },
+		{ "hu_fild02", 222, 193, 1 },
+		{ "hu_fild03", 232, 185, 1 },
+		{ "hu_fild04", 252, 189, 1 },
+		{ "hu_fild05", 196, 106, 1 },
+		{ "hu_fild06", 216, 220, 1 },
+		{ "hu_fild07", 227, 197, 1 },
+
+		//Ligthhalzen
+		{ "lhz_fild01", 240, 179, 1 },
+		{ "lhz_fild02", 185, 235, 1 },
+		{ "lhz_fild03", 240, 226, 1 },
+
+		//Louyang
+		{ "lou_fild01", 229, 187, 1 },
+
+		//Lutie
+		{ "xmas_fild01", 115, 145, 10 }, ///Haiti
+
+		//Man qq coisa
+		{ "man_fild01", 35, 236, 1 },
+		{ "man_fild02", 35, 262, 1 },
+		{ "man_fild03", 84, 365, 1 },
+
+		//Mjolnir
+		{ "mjolnir_01", 204, 120, 1 },
+		{ "mjolnir_02", 175, 193, 1 },
+		{ "mjolnir_03", 208, 213, 1 },
+		{ "mjolnir_04", 179, 180, 1 },
+		{ "mjolnir_05", 181, 240, 1 },
+		{ "mjolnir_06", 195, 270, 1 },
+		{ "mjolnir_07", 235, 202, 1 },
+		{ "mjolnir_08", 188, 215, 1 },
+		{ "mjolnir_09", 205, 144, 1 },
+		{ "mjolnir_10", 245, 223, 1 },
+		{ "mjolnir_11", 180, 206, 1 },
+		{ "mjolnir_12", 196, 208, 1 },
+
+		//Moskavia
+		{ "mosk_fild01", 82, 104, 1 },
+		{ "mosk_fild02", 131, 147, 1 },
+
+		//Niflheim
+		{ "nif_fild01", 215, 229, 1 },
+		{ "nif_fild02", 167, 234, 1 },
+
+
+		//Payon
+		{ "pay_fild01", 158, 206, 1 },
+		{ "pay_fild02", 151, 219, 1 },
+		{ "pay_fild03", 205, 148, 1 },
+		{ "pay_fild04", 186, 247, 1 },
+		{ "pay_fild05", 134, 204, 1 },
+		{ "pay_fild06", 193, 235, 1 },
+		{ "pay_fild07", 200, 177, 1 },
+		{ "pay_fild08", 137, 189, 1 },
+		{ "pay_fild09", 201, 224, 1 },
+		{ "pay_fild10", 160, 205, 1 },
+		{ "pay_fild11", 194, 150, 1 },
+
+
+		//Prontera
+		{ "prt_fild01", 208, 227, 1 },
+		{ "prt_fild02", 190, 206, 1 },
+		{ "prt_fild03", 240, 206, 1 },
+		{ "prt_fild04", 190, 143, 1 },
+		{ "prt_fild05", 307, 252, 1 },
+		{ "prt_fild06", 239, 213, 1 },
+		{ "prt_fild07", 185, 188, 1 },
+		{ "prt_fild08", 193, 194, 1 },
+		{ "prt_fild09", 187, 218, 1 },
+		{ "prt_fild10", 210, 183, 1 },
+		{ "prt_fild11", 195, 149, 1 },
+		{ "prt_fild11", 198, 164, 1 },
+
+
+		//Rachel
+		{ "ra_fild01", 192, 162, 1 },
+		{ "ra_fild02", 235, 166, 1 },
+		{ "ra_fild03", 202, 206, 1 },
+		{ "ra_fild04", 202, 208, 1 },
+		{ "ra_fild05", 225, 202, 1 },
+		{ "ra_fild06", 202, 214, 1 },
+		{ "ra_fild07", 263, 196, 1 },
+		{ "ra_fild08", 217, 201, 1 },
+		{ "ra_fild09", 87, 121, 1 },
+		{ "ra_fild10", 277, 181, 1 },
+		{ "ra_fild11", 221, 185, 1 },
+		{ "ra_fild12", 175, 200, 1 },
+		{ "ra_fild13", 174, 197, 1 },
+
+
+		//Morroc - Sograt Desert
+		{ "moc_fild01", 219, 205, 1 },
+		{ "moc_fild02", 177, 206, 1 },
+		{ "moc_fild03", 194, 182, 1 },
+		{ "moc_fild07", 224, 170, 1 },
+		{ "moc_fild11", 198, 216, 1 },
+		{ "moc_fild12", 156, 187, 1 },
+		{ "moc_fild13", 185, 263, 1 },
+		{ "moc_fild16", 206, 228, 1 },
+		{ "moc_fild17", 208, 238, 1 },
+		{ "moc_fild18", 209, 223, 1 },
+		{ "moc_fild19", 85, 97, 1 },
+		{ "moc_fild20", 207, 202, 1 },
+		{ "moc_fild21", 31, 195, 1 },
+		{ "moc_fild22", 38, 195, 1 },
+
+		//Spleinder
+		{ "spl_fild01", 175, 186, 1 },
+		{ "spl_fild02", 236, 184, 1 },
+		{ "spl_fild03", 188, 204, 1 },
+
+		//Umbala
+		{ "um_fild01", 217, 206, 1 },
+		{ "um_fild02", 223, 221, 1 },
+		{ "um_fild03", 237, 215, 1 },
+		{ "um_fild04", 202, 197, 1 },
+
+		//Veins
+		{ "ve_fild01", 186, 175, 1 },
+		{ "ve_fild02", 196, 370, 1 },
+		{ "ve_fild03", 222, 45, 1 },
+		{ "ve_fild04", 51, 250, 1 },
+		{ "ve_fild05", 202, 324, 1 },
+		{ "ve_fild06", 150, 223, 1 },
+		{ "ve_fild07", 149, 307, 1 },
+
+
+		//Yuno - Juno
+		{ "yuno_fild0", 189, 224, 1 },
+		{ "yuno_fild0", 192, 207, 1 },
+		{ "yuno_fild0", 221, 157, 1 },
+		{ "yuno_fild0", 226, 199, 1 },
+		{ "yuno_fild0", 223, 177, 1 },
+		{ "yuno_fild0", 187, 232, 1 },
+		{ "yuno_fild0", 231, 174, 1 },
+		{ "yuno_fild0", 196, 203, 1 },
+		{ "yuno_fild0", 183, 214, 1 },
+		{ "yuno_fild10", 200, 124, 1 },
+		{ "yuno_fild11", 195, 226, 1 },
+		{ "yuno_fild12", 210, 304, 1 },
+		
+		
 		///### Dungeons
 		{ "prt_sewb1", 132, 248, 0 },
 		{ "prt_sewb2", 19, 15, 0 },
@@ -9519,8 +9715,6 @@ ACMD(move) {
 		{ "tur_dun02", 167, 23, 0 },
 		{ "tur_dun03", 132, 189, 0 },
 		{ "tur_dun04", 100, 192, 10 }, //(General Tartaruga)
-		  
-		{ "xmas_fild01", 84, 51, 10 }, //(Hatii)
 		  
 		{ "xmas_dun01", 205, 16, 0 },
 		{ "xmas_dun02", 133, 130, 10 }, //(Cavaleiro da Tempestade)
