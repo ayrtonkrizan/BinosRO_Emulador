@@ -50,9 +50,7 @@ Thumbs.db
 
 # /conf/
 /conf/import
-/conf/map-server.conf
-/conf/char-server.conf
-/conf/login-server.conf
+/conf/*.bkp
 
 # /log/
 /log/*.log

@@ -9572,7 +9572,7 @@ ACMD(move) {
 		{ "lou_fild01", 229, 187, 1 },
 
 		//Lutie
-		{ "xmas_fild01", 115, 145, 10 }, ///Haiti
+		{ "xmas_fild01", 115, 145, 2 }, ///Haiti
 
 		//Man qq coisa
 		{ "man_fild01", 35, 236, 1 },
@@ -9631,7 +9631,7 @@ ACMD(move) {
 		{ "prt_fild11", 198, 164, 1 },
 
 
-		//Rachel
+			//Rachel
 		{ "ra_fild01", 192, 162, 1 },
 		{ "ra_fild02", 235, 166, 1 },
 		{ "ra_fild03", 202, 206, 1 },
@@ -9647,7 +9647,7 @@ ACMD(move) {
 		{ "ra_fild13", 174, 197, 1 },
 
 
-		//Morroc - Sograt Desert
+			//Morroc - Sograt Desert
 		{ "moc_fild01", 219, 205, 1 },
 		{ "moc_fild02", 177, 206, 1 },
 		{ "moc_fild03", 194, 182, 1 },
@@ -9663,18 +9663,18 @@ ACMD(move) {
 		{ "moc_fild21", 31, 195, 1 },
 		{ "moc_fild22", 38, 195, 1 },
 
-		//Spleinder
+			//Spleinder
 		{ "spl_fild01", 175, 186, 1 },
 		{ "spl_fild02", 236, 184, 1 },
 		{ "spl_fild03", 188, 204, 1 },
 
-		//Umbala
+			//Umbala
 		{ "um_fild01", 217, 206, 1 },
 		{ "um_fild02", 223, 221, 1 },
 		{ "um_fild03", 237, 215, 1 },
 		{ "um_fild04", 202, 197, 1 },
 
-		//Veins
+			//Veins
 		{ "ve_fild01", 186, 175, 1 },
 		{ "ve_fild02", 196, 370, 1 },
 		{ "ve_fild03", 222, 45, 1 },
@@ -9684,7 +9684,7 @@ ACMD(move) {
 		{ "ve_fild07", 149, 307, 1 },
 
 
-		//Yuno - Juno
+			//Yuno - Juno
 		{ "yuno_fild0", 189, 224, 1 },
 		{ "yuno_fild0", 192, 207, 1 },
 		{ "yuno_fild0", 221, 157, 1 },
@@ -9697,31 +9697,31 @@ ACMD(move) {
 		{ "yuno_fild10", 200, 124, 1 },
 		{ "yuno_fild11", 195, 226, 1 },
 		{ "yuno_fild12", 210, 304, 1 },
-		
-		
-		///### Dungeons
-		
-		{"abbey01",51,14,0 },
-		{"abbey02", 150, 11, 1},
-		{"abbey03", 120, 10, 1},
+
+
+			///### Dungeons
+
+		{ "abbey01",51,14,0 },
+		{ "abbey02", 150, 11, 1 },
+		{ "abbey03", 120, 10, 2 }, //Fallen bishop
 
 		{ "abyss_01",261,272, 0 },
 		{ "abyss_02",275,270, 1 },
-		{ "abyss_03",116,27, 10 },
+		{ "abyss_03",116,27, 2 },
 
 		{ "ama_dun01", 229, 11, 0 },
 		{ "ama_dun02", 33, 40, 1 },
-		{ "ama_dun03", 120, 12, 10 },  //(Samurai Encarnado)
-		
+		{ "ama_dun03", 120, 12, 2 },  //(Samurai Encarnado)
+
 		{ "ayo_dun01",275,19, 0 },
 		{ "ayo_dun02",24,26, 1 },
 
 		{ "anthell01", 37, 362, 0 },
-		{ "anthell02", 169, 170, 10 },// (Maya)
-		
-		{ "beach_dun",266,67,0 },
-		{ "beach_dun2",255,244,0 },
-		{ "beach_dun3",23,260,0 },
+		{ "anthell02", 169, 170, 2 },// (Maya)
+
+		{ "beach_dun",266,67,2 }, //Tao Gunka
+		{ "beach_dun2",255,244,1 },
+		{ "beach_dun3",23,260,1 },
 
 		{ "c_tower1",199,159, 0 },
 		{ "c_tower2",148,283, 1 },
@@ -9733,84 +9733,84 @@ ACMD(move) {
 		{ "alde_dun04",268,74,1 },
 
 		{ "ein_dun01", 22, 13, 0 },
-		{ "ein_dun02", 291, 292, 10 }, //(RSX-0806)
+		{ "ein_dun02", 291, 292, 2 }, //(RSX-0806)
 
 		{ "gefenia01", 223, 256, 0 },
-		{ "gefenia02", 240, 23, 0 },
-		{ "gefenia03", 58, 29, 0 },
-		{ "gefenia04", 284, 95, 0 },
+		{ "gefenia02", 240, 23, 1 },
+		{ "gefenia03", 58, 29, 1 },
+		{ "gefenia04", 284, 95, 1 },
 
 		{ "gef_dun00", 104, 199, 0 },
-		{ "gef_dun01", 115, 236, 0 },
-		{ "gef_dun02", 106, 131, 10 },// (Doppelganger)
+		{ "gef_dun01", 115, 236, 2 },// Dracula
+		{ "gef_dun02", 106, 131, 2 },// (Doppelganger)
 		  
-		{ "gl_chyard", 147, 15, 10 },// (Dark Lord)
+		{ "gl_chyard", 147, 15, 2 },// (Dark Lord)
 		{ "gl_church", 156, 8, 0 },
 		{ "gl_knt01", 150, 10, 0 },
-		{ "gl_knt02", 15, 140, 0 },
-		{ "gl_cas01", 200, 22, 0 },
-		{ "gl_cas02", 104, 18, 0 },
+		{ "gl_knt02", 15, 140, 1 },
+		{ "gl_cas01", 200, 22, 1 },
+		{ "gl_cas02", 104, 18, 1 },
 		{ "gl_prison", 14, 70, 0 },
-		{ "gl_prison", 150, 13, 0 },
+		{ "gl_prison1", 150, 13, 1 },
 		{ "gl_sew01", 258, 255, 0 },
-		{ "gl_sew02", 30, 269, 0 },
-		{ "gl_sew03", 172, 283, 0 },
-		{ "gl_sew04", 68, 277, 0 },
+		{ "gl_sew02", 30, 269, 1 },
+		{ "gl_sew03", 172, 283, 1 },
+		{ "gl_sew04", 68, 277, 1 },
 		{ "gl_dun01", 134, 274, 0 },
-		{ "gl_dun02", 224, 274, 0 },
+		{ "gl_dun02", 224, 274, 1 },
 
 		{ "gon_dun01", 153, 48, 0 },
-		{ "gon_dun02", 17, 113, 0 },
-		{ "gon_dun03", 67, 9, 0 },// (Serpente Suprema)
+		{ "gon_dun02", 17, 113, 1 },
+		{ "gon_dun03", 67, 9, 2 },// (Serpente Suprema)
 		  
 		{ "ice_dun01", 157, 13, 0 },
-		{ "ice_dun02", 151, 139, 0 },
-		{ "ice_dun03", 149, 21, 10 },// (Ktullanux)
+		{ "ice_dun02", 151, 139, 1 },
+		{ "ice_dun03", 149, 21, 2 },// (Ktullanux)
 
 		{ "in_sphinx1", 288, 8, 0 },
-		{ "in_sphinx2", 149, 81, 0 },
-		{ "in_sphinx3", 210, 54, 0 },
-		{ "in_sphinx4", 10, 222, 0 },
-		{ "in_sphinx5", 99, 100, 10 }, //(Faraó)
+		{ "in_sphinx2", 149, 81, 1 },
+		{ "in_sphinx3", 210, 54, 1 },
+		{ "in_sphinx4", 10, 222, 1 },
+		{ "in_sphinx5", 99, 100, 2 }, //(Faraó)
 
 		{ "iz_dun00", 168, 169, 0 },
-		{ "iz_dun01", 253, 253, 0 },
-		{ "iz_dun02", 236, 204, 0 },
-		{ "iz_dun03", 34, 64, 0 },
-		{ "iz_dun04", 26, 29, 0 },
+		{ "iz_dun01", 253, 253, 1 },
+		{ "iz_dun02", 236, 204, 1 },
+		{ "iz_dun03", 34, 64, 1 },
+		{ "iz_dun04", 26, 29, 1 },
 
 		{ "juperos_01", 53, 248, 0 },
-		{ "juperos_02", 34, 62, 0 },
-		{ "jupe_core", 149, 286, 10 },// (Vesper)
+		{ "juperos_02", 34, 62, 1 },
+		{ "jupe_core", 149, 286, 2 },// (Vesper)
 
 		{ "kh_dun01", 3, 231, 0 },
-		{ "kh_dun02", 41, 196, 10 },// (Kiel D-01)
+		{ "kh_dun02", 41, 196, 2 },// (Kiel D-01)
 
 		{ "lou_dun01", 218, 195, 0 },
-		{ "lou_dun02", 285, 18, 0 },
-		{ "lou_dun03", 165, 38, 10 },// (Bacosjin)
+		{ "lou_dun02", 285, 18, 1 },
+		{ "lou_dun03", 165, 38, 2 },// (Bacosjin)
 
 		{ "lhz_dun01", 144, 9, 0 },
-		{ "lhz_dun02", 183, 138, 0 },
-		{ "lhz_dun03", 140, 133, 10 }, //(MVP PUTASSO)
+		{ "lhz_dun02", 183, 138, 1 },
+		{ "lhz_dun03", 140, 133, 2 }, //(MVP PUTASSO)
 		
 		{ "mag_dun01", 126, 69, 0 },
-		{ "mag_dun02", 47, 30, 0 },
+		{ "mag_dun02", 47, 30, 1 },
 
 		{ "mjo_dun01", 52, 17, 0 },
-		{ "mjo_dun02", 381, 343, 0 },
-		{ "mjo_dun03", 305, 261, 0 },
+		{ "mjo_dun02", 381, 343, 1 },
+		{ "mjo_dun03", 305, 261, 1 },
 		  
 		{ "moc_pryd01", 192, 9, 0 },
-		{ "moc_pryd02", 10, 192, 0 },
-		{ "moc_pryd03", 100, 93, 0 },
-		{ "moc_pryd04", 181, 11, 10 }, //(Osiris) 
-		{ "moc_pryd05", 93, 96, 0 },
-		{ "moc_pryd06", 194, 10, 10 },// (AmonRá)
+		{ "moc_pryd02", 10, 192, 1 },
+		{ "moc_pryd03", 100, 93, 1 },
+		{ "moc_pryd04", 181, 11, 2 }, //(Osiris) 
+		{ "moc_pryd05", 93, 96, 1 },
+		{ "moc_pryd06", 194, 10, 2 },// (AmonRá)
 
 		{ "mosk_dun01", 189, 45, 0 },
-		{ "mosk_dun02", 165, 29, 0 },
-		{ "mosk_dun03", 31, 133, 10 }, //(MVP DRAGAO N SEI O NOME)
+		{ "mosk_dun02", 165, 29, 1 },
+		{ "mosk_dun03", 31, 133, 2 }, //(MVP DRAGAO N SEI O NOME)
 
 
 		{ "nyd_dun01",61,239,0 },
@@ -9822,32 +9822,32 @@ ACMD(move) {
 		*/
 
 		{ "odin_tem01", 96, 146, 0 },
-		{ "odin_tem02", 27, 334, 0 },
-		{ "odin_tem03", 247, 37, 10 },// (Valkyrie Randgris)
+		{ "odin_tem02", 27, 334, 1 },
+		{ "odin_tem03", 247, 37, 2 },// (Valkyrie Randgris)
 
 		{ "orcsdun01", 32, 169, 0 },
-		{ "orcsdun02", 21, 185, 0 },
+		{ "orcsdun02", 21, 185, 1 },
 
 		{ "pay_dun00", 21, 183, 0 },
-		{ "pay_dun01", 18, 33, 0 },
-		{ "pay_dun02", 19, 63, 0 },
-		{ "pay_dun03", 155, 158, 0 },
-		{ "pay_dun04", 43, 40, 10 },  //(Flor do Luar)
+		{ "pay_dun01", 18, 33, 1 },
+		{ "pay_dun02", 19, 63, 1 },
+		{ "pay_dun03", 155, 158, 1 },
+		{ "pay_dun04", 43, 40, 2 },  //(Flor do Luar)
 
 		{ "prt_sewb1", 132, 248, 0 },
-		{ "prt_sewb2", 19, 15, 0 },
-		{ "prt_sewb3", 180, 170, 0 },
-		{ "prt_sewb4", 100, 92, 10 },// (Besouro-Ladrão Dourado)
+		{ "prt_sewb2", 19, 15, 1 },
+		{ "prt_sewb3", 180, 170, 1 },
+		{ "prt_sewb4", 100, 92, 2 },// (Besouro-Ladrão Dourado)
 
 		{ "prt_maze01", 48, 104, 0 },
-		{ "prt_maze02", 93, 19, 0 },
-		{ "prt_maze03", 182, 88, 10 },// (Bafomé)
+		{ "prt_maze02", 93, 19, 1 },
+		{ "prt_maze03", 182, 88, 2 },// (Bafomé)
 
 		{ "ra_san01", 140, 19, 0 },
-		{ "ra_san02", 287, 149, 0 },
-		{ "ra_san03", 119, 283, 0 },
-		{ "ra_san04", 119, 101, 0 },
-		{ "ra_san05", 150, 9, 10 }, //(Pesar Noturno)
+		{ "ra_san02", 287, 149, 1 },
+		{ "ra_san03", 119, 283, 1 },
+		{ "ra_san04", 119, 101, 1 },
+		{ "ra_san05", 150, 9, 2 }, //(Pesar Noturno)
 
 		{ "tha_t01",150,39,0 },
 		{ "tha_t02",150,136,1 },
@@ -9860,25 +9860,25 @@ ACMD(move) {
 		{ "tha_t09",29,107,1 },
 		{ "tha_t10",159,138,1 },
 		{ "tha_t11",19,20,1 },
-		{ "tha_t12",130,52,10 },//Thanatos
+		{ "tha_t12",130,52,2 },//Thanatos
 
 		{ "thor_v01", 21, 229, 0 },
-		{ "thor_v02", 77, 203, 0 },
-		{ "thor_v03", 34, 261, 10 },// (Ifrit)
+		{ "thor_v02", 77, 203, 1 },
+		{ "thor_v03", 34, 261, 2 },// (Ifrit)
 
 		{ "treasure01", 69, 24, 0 },
-		{ "treasure02", 102, 26, 10 },// (Drake)
+		{ "treasure02", 102, 26, 2 },// (Drake)
 
 		{ "tur_dun01", 157, 37, 0 },
-		{ "tur_dun02", 167, 23, 0 },
-		{ "tur_dun03", 132, 189, 0 },
-		{ "tur_dun04", 100, 192, 10 }, //(General Tartaruga)
+		{ "tur_dun02", 167, 23, 1 },
+		{ "tur_dun03", 132, 189, 1 },
+		{ "tur_dun04", 100, 192, 2 }, //(General Tartaruga)
 
 		{ "um_dun01", 42, 29, 0 },
-		{ "um_dun02", 52, 22, 0 },
+		{ "um_dun02", 52, 22, 1 },
 
-		{ "xmas_dun01", 205, 16, 0 },
-		{ "xmas_dun02", 133, 130, 10 }, //(Cavaleiro da Tempestade)
+		{ "xmas_dun01", 205, 16, 1 },
+		{ "xmas_dun02", 133, 130, 2 }, //(Cavaleiro da Tempestade)
 
 		{ "yggdrasil01",204,78,1 },
 
@@ -9927,7 +9927,8 @@ ACMD(move) {
 			return false;
 		}
 		if (sd->group_id < data[town].group_min) {
-			clif->message(fd, "Não não permitido");
+			clif->message(fd, "Warp para esse mapa não é permitido a você");
+			return false;
 		}
 		if (pc->setpos(sd, mapindex->name2id(data[town].map), data[town].x, data[town].y, CLR_TELEPORT) == 0) {
 			clif->message(fd, msg_fd(fd, 0)); // Warped.
