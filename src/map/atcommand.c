@@ -9701,13 +9701,37 @@ ACMD(move) {
 		
 		///### Dungeons
 		
+		{"abbey01",51,14,0 },
+		{"abbey02", 150, 11, 1},
+		{"abbey03", 120, 10, 1},
+
+		{ "abyss_01",261,272, 0 },
+		{ "abyss_02",275,270, 1 },
+		{ "abyss_03",116,27, 10 },
+
 		{ "ama_dun01", 229, 11, 0 },
-		{ "ama_dun02", 33, 40, 0 },
+		{ "ama_dun02", 33, 40, 1 },
 		{ "ama_dun03", 120, 12, 10 },  //(Samurai Encarnado)
 		
+		{ "ayo_dun01",275,19, 0 },
+		{ "ayo_dun02",24,26, 1 },
+
 		{ "anthell01", 37, 362, 0 },
 		{ "anthell02", 169, 170, 10 },// (Maya)
 		
+		{ "beach_dun",266,67,0 },
+		{ "beach_dun2",255,244,0 },
+		{ "beach_dun3",23,260,0 },
+
+		{ "c_tower1",199,159, 0 },
+		{ "c_tower2",148,283, 1 },
+		{ "c_tower3",65,147,1 },
+		{ "c_tower4",56,155,1 },
+		{ "alde_dun01",297,25 ,1 },
+		{ "alde_dun02",127,169,1 },
+		{ "alde_dun03",277,178,1 },
+		{ "alde_dun04",268,74,1 },
+
 		{ "ein_dun01", 22, 13, 0 },
 		{ "ein_dun02", 291, 292, 10 }, //(RSX-0806)
 
@@ -9788,6 +9812,9 @@ ACMD(move) {
 		{ "mosk_dun02", 165, 29, 0 },
 		{ "mosk_dun03", 31, 133, 10 }, //(MVP DRAGAO N SEI O NOME)
 
+
+		{ "nyd_dun01",61,239,0 },
+		{ "nyd_dun02",60,271,1 },
 		/*{ "nyd_dun01", 0 },
 		{ "nyd_dun02", 0 },
 		{ "1@nyd", 0 },
@@ -9822,20 +9849,19 @@ ACMD(move) {
 		{ "ra_san04", 119, 101, 0 },
 		{ "ra_san05", 150, 9, 10 }, //(Pesar Noturno)
 
-		/*{ "tha_t01", 0 },
-		{ "tha_t02", 0 },
-		{ "tha_t03", 0 },
-		{ "tha_t04", 0 },
-		{ "tha_t05", 0 },
-		{ "tha_t06", 0 },
-		{ "tha_t07", 0 },
-		{ "tha_t08", 0 },
-		{ "tha_t09", 0 },
-		{ "tha_t10", 0 },
-		{ "tha_t11", 0 },
-		{ "tha_t12", 0 },
+		{ "tha_t01",150,39,0 },
+		{ "tha_t02",150,136,1 },
+		{ "tha_t03",220,158,1 },
+		{ "tha_t04",59,143,1 },
+		{ "tha_t05",62,11,1 },
+		{ "tha_t06",89,221,1 },
+		{ "tha_t07",35,166,1 },
+		{ "tha_t08",93,148,1 },
+		{ "tha_t09",29,107,1 },
+		{ "tha_t10",159,138,1 },
+		{ "tha_t11",19,20,1 },
+		{ "tha_t12",130,52,10 },//Thanatos
 
-		*/
 		{ "thor_v01", 21, 229, 0 },
 		{ "thor_v02", 77, 203, 0 },
 		{ "thor_v03", 34, 261, 10 },// (Ifrit)
@@ -9854,6 +9880,7 @@ ACMD(move) {
 		{ "xmas_dun01", 205, 16, 0 },
 		{ "xmas_dun02", 133, 130, 10 }, //(Cavaleiro da Tempestade)
 
+		{ "yggdrasil01",204,78,1 },
 
 	};
 
@@ -9898,6 +9925,9 @@ ACMD(move) {
 		if (sd->bl.m >= 0 && map->list[sd->bl.m].flag.nowarp && !pc_has_permission(sd, PC_PERM_WARP_ANYWHERE)) {
 			clif->message(fd, msg_fd(fd, 248));
 			return false;
+		}
+		if (sd->group_id < data[town].group_min) {
+			clif->message(fd, "Não não permitido");
 		}
 		if (pc->setpos(sd, mapindex->name2id(data[town].map), data[town].x, data[town].y, CLR_TELEPORT) == 0) {
 			clif->message(fd, msg_fd(fd, 0)); // Warped.
