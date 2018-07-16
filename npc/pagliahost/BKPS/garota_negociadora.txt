@@ -23,7 +23,7 @@
 //============|Compatibilidade|=====================================
 // Emulador: brAthena
 //==================================================================
-prontera,143,194,4	script	Garota Negociante	4_F_01,{
+prontera,143,194,4	script	[ Garota Negociante ]	4_F_01,{
 
 	mes "[Garota Negociante]";
 	mes "Olá, aqui você pode alugar um carrinho, pecopeco ou falcão depedendo de sua profissão.";

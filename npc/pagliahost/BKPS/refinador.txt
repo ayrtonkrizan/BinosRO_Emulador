@@ -5,7 +5,7 @@ prontera,141,195,4	script	Refinador	1_M_JOBGUIDER,{
 // Preço do Refinador
 	set .@_ref_cost,0;
 // O Refinador pode refinar itens não-refináveis? 1=Sim / 0=Não
-	set .@_ref_ignore,0;
+	set .@_ref_ignore,1;
 // Até quanto o Refinador pode refinar os itens?
 	set .@_ref_max,10;
 // O refinador pode diminuir a taxa de refinamento dos itens? 1=Sim / 0=Não
