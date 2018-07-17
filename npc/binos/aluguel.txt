@@ -1,16 +1,5 @@
-//===== Hercules Script ======================================
-//= Universal Rental NPC
-//===== By: ==================================================
-//= Euphy
-//===== Current Version: =====================================
-//= 1.2
-//===== Description: =========================================
-//= One-click automatic mount rentals.
-//= Replaced 'close' with 'end' [Streusel]
-//= Fixed 'close' issues. [Joseph]
-//============================================================
 
-prontera,124,201,1	script	Garota Negociante	4_F_JOB_BLACKSMITH,{
+-	script	GarotaNegociante	-1,{
 	/* FAZER: Isso pode ser otimizado com apenas o setmount(), já que ele pode
 Auto-detectar a necessidade adequada de cada classe/habilidade. */
 	if (hascashmount()) {
@@ -54,15 +43,5 @@ Auto-detectar a necessidade adequada de cada classe/habilidade. */
 	specialeffect2 EF_TEIHIT3;
 	end;
 }
-
-//============================================================
-// Old changelog
-//============================================================
-//= A Free PecoPeco and Falcon Breeder
-//= 1.1 FIXED checkriding/cart/falcon funcs [Lupus]
-//= 1.2 Added Rebirth/Advanced Class support [Mass Zero]
-//= 1.3 Simplified the checks of job [Silentdragon]
-//= 1.3a Fixed a Typo Error. [Samuray22]
-//=      Thanks to ~AnnieRuru~.
-//= 1.4 Optimized Script. No need for 50 million Labels. [Spre]
-//============================================================
+sec_in02,137,168,2	duplicate(Garota_Negociante)	Garota Negociante#vip	4_F_JOB_BLACKSMITH
+prontera,124,201,1	duplicate(Garota_Negociante)	Garota Negociante#prt	4_F_JOB_BLACKSMITH

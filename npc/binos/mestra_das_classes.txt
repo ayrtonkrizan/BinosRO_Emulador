@@ -1,38 +1,5 @@
-//  _________________________________________________________
-// /                                                         \
-// |      ___           ___           ___           ___      |
-// |     /__/\         /  /\         /  /\         /__/|     |
-// |    |  |::\       /  /::\       /  /::\       |  |:|     |
-// |    |  |:|:\     /  /:/\:\     /  /:/\:\      |  |:|     |
-// |  __|__|:|\:\   /  /:/~/::\   /  /:/~/:/    __|  |:|     |
-// | /__/::::| \:\ /__/:/ /:/\:\ /__/:/ /:/___ /__/\_|:|____ |
-// | \  \:\~~\__\/ \  \:\/:/__\/ \  \:\/:::::/ \  \:\/:::::/ |
-// |  \  \:\        \  \::/       \  \::/~~~~   \  \::/~~~~  |
-// |   \  \:\        \  \:\        \  \:\        \  \:\      |
-// |    \  \:\        \  \:\        \  \:\        \  \:\     |
-// |     \__\/         \__\/         \__\/         \__\/     |
-// |---------------------------------------------------------|
-// | Nome do Script: Mestra das Classes                      |
-// |---------------------------------------------------------|
-// | Criado por: Mark                                        |
-// |---------------------------------------------------------|
-// | Versões: 1.3         Roda com: brA/eA/Cronus            |
-// |---------------------------------------------------------|
-// | Descrição:                                              |
-// |  - Mestra das Classes                                   |
-// |   + Com classes 3rd.                                    |
-// |   + Entrega equipamentos aos 3rd (como no oficial).     |
-// |---------------------------------------------------------|
-// | Changelog:               	                             |
-// | 1.0 Script Criado [Mark]                                |
-// | 1.1 Corrigido evolução para SL ou MTK [Mark]            |
-// | 1.2 Adicionadas armas de Iniciante [Mark]               |
-// | 1.3 Adicionadas algumas opções: [Mark]                  |
-// |   - Servidor ser OldTimes, Transclasse ou 3rd Class     |
-// |   - Se o servidor terá ou não classes Baby              |
-// |   - Configurável no final do script.                    |
-// \_________________________________________________________/
-prontera,155,180,4	script	Mestra das Classes	4_MAL_KAFRA,{
+//  Mestre das Classes 
+-	script	Mestre_Das_Classes	-1,{
 	mes "^ff0000[Mestra das Classes]^000000";
 	if ((Class > 6 && Class < 28 && !.svtype) || (Class > 4029 && Class < 4046 && (!.svtype || .svtype == 1)) ||(Class > 4007 && Class < 4023 && .svtype == 1) || (Class > 23 && Class < 26) || (Class > 4046 && Class <= 4049) || (Class > 4053 && Class < 4080) || (Class > 4095 && Class < 4109) || Class == 4190 || Class == 4191)
 	{
@@ -267,10 +234,14 @@ OnInit:
 	setarray .iniciante[1],13415,1639,1742,1545,1381,13041;
 	
 	// Coloque aqui o tipo de servidor. ( 0 - OldTimes / 1 - Transclasses / 2 - Terceiras Classes)
-	set .svtype,2;
+	set .svtype,1;
 	
 	// Coloque aqui se haverá classes Baby ( 1 - Sim / 0 - Não)
 	set .svbaby,1;
 	
 	
 }
+
+/// Duplicates
+sec_in02,133,168,4	duplicate(Mestre_Das_Classes)	Mestre Das Classes#vip	4_F_LAPERM
+prontera,155,180,3	duplicate(Mestre_Das_Classes)	Mestre Das Classes#prt	4_F_LAPERM

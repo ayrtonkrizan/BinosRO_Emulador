@@ -1,4 +1,4 @@
-prontera,149,191,5	script	Velha Sábia#eAcustom	1_F_ORIENT_04,{
+-	script	Velha_Sabia	-1,{
 
 //===== Configurações: =========================================
 set .@falhar, 0;	// A remoção pode falhar? [1=Sim/0=Não]
@@ -87,3 +87,6 @@ set .@vip, 1;  // Verifica se o usuario tem que ser vip [1=sim/0=não]
 		close;
 	return;
 }
+
+sec_in02,141,163,4	duplicate(Velha_Sabia)	Velha Sábia#vip	1_F_ORIENT_04
+prontera,149,191,4	duplicate(Velha_Sabia)	Velha Sábia#prt	1_F_ORIENT_04

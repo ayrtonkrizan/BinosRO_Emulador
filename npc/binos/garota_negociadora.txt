@@ -1,29 +1,4 @@
-//==============================================================
-//                       * *
-//                     *¨¨¨¨¨*
-//                     *¨¨¨¨¨¨¨*
-//             ____    _____     ____    _____                
-//            / __ \¨¨|  _  \¨¨ / __ \¨¨/ ____|
-//           | /  \ | | (_)  | | /  \_| | |___
-//           | |  | | | __  /  | |   _  | ____|
-//           | \__/ | | | \ \  | \__/ | | |___
-//            \____/  |_|  \_\  \____/  \_____|
-//
-//               _   _   _   _   _   _   _
-//              / \ / \ / \ / \ / \ / \ / \
-//             ( S | C | R | I | P | T | S )
-//              \_/ \_/ \_/ \_/ \_/ \_/ \_/
-//
-//==================================================================
-// Copyright © 2008/2016 Orce Scripts todos os direitos reservados.
-//===========|Nome do Script|=======================================
-// Nome: Amaury Arantes Januário
-//================|Autor|===========================================
-// Autor: Orce
-//============|Compatibilidade|=====================================
-// Emulador: brAthena
-//==================================================================
-prontera,143,194,4	script	Garota Negociante	4_F_01,{
+-	script	Garota_Negociante	-1,{
 
 	mes "[Garota Negociante]";
 	mes "Olá, aqui você pode alugar um carrinho, pecopeco ou falcão depedendo de sua profissão.";
@@ -41,3 +16,5 @@ prontera,143,194,4	script	Garota Negociante	4_F_01,{
 	mes "Aqui está, faça bom proveito!";
 	close;
 }
+sec_in02,137,168,4	duplicate(Garota_Negociante)	Garota Negociante#vip	4_F_01
+prontera,143,194,4	duplicate(Garota_Negociante)	Garota Negociante#prt	4_F_01

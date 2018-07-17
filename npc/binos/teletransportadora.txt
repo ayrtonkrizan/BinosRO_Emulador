@@ -466,6 +466,7 @@ S8: Go("turbo_room",99,114);
 // --------------------------------------------------
 //	Duplicates:
 // --------------------------------------------------
+sec_in02,139,168,4	duplicate(Warper)	Warper#vip	4_F_VALKYRIE
 alb2trea,57,70,6	duplicate(Warper)	Warper#tre	4_F_VALKYRIE
 alberta,28,240,4	duplicate(Warper)	Warper#alb	4_F_VALKYRIE
 aldebaran,145,118,4	duplicate(Warper)	Warper#alde	4_F_VALKYRIE

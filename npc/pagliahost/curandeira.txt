@@ -1,4 +1,4 @@
-prontera,156,185,4	script	Curandeira	4_F_ARUNA_POP,{
+-	script	Curandeira	-1,{
  
 	set .@Price, 0; // Preço a ser cobrado, 0 para desabilitar esta função.
 	set .@Delay, 1; // Tempo em segundos de restrição de uso após uso.
@@ -41,4 +41,5 @@ prontera,156,185,4	script	Curandeira	4_F_ARUNA_POP,{
 	end;
 }
 
-
+sec_in02,135,168,2	duplicate(Curandeira)	Curandeira#vip	4_F_LAPERM
+prontera,156,185,4	duplicate(Curandeira)	Curandeira#prt	4_F_LAPERM
