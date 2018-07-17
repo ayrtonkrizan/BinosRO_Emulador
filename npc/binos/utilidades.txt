@@ -5,14 +5,17 @@ OnInit:
 	sellitem Silver_Arrow;
 	sellitem Fire_Arrow;
 	sellitem Red_Potion;
-	sellitem Orange_Potion;
-	sellitem Yellow_Potion;
+	//sellitem Orange_Potion;
+	//sellitem Yellow_Potion;
 	sellitem White_Potion;
+	sellitem Blue_Potion;
 	sellitem Green_Potion;
 	sellitem Center_Potion;
 	sellitem Awakening_Potion;
 	sellitem Wing_Of_Fly;
-	sellitem Wing_Of_Butterfly;
+	//sellitem Wing_Of_Butterfly;
 	sellitem Booby_Trap;
-	sellitem One_Eyed_Glass;
+	//sellitem One_Eyed_Glass;
+	sellitem Blue_Gemstone;
+	sellitem Arrow_Container;
 }
