@@ -1,4 +1,4 @@
-prontera,169,179,3	script	[ Estilista ]	2_M_DYEINGER,{
+-	script	Estilista	-1,{
 
 //==============================================================
 //= Configurações do NPC
@@ -641,3 +641,8 @@ prontera,169,179,3	script	[ Estilista ]	2_M_DYEINGER,{
 		close;
 	}
 }
+
+
+///prontera,169,179,3	script	[ Estilista ]	2_M_DYEINGER,{
+prontera,169,179,3	duplicate(Estilista)	Estilista#prt	2_M_DYEINGER
+sec_in02,156,183,3	duplicate(Estilista)	Estilista#vip	2_M_DYEINGER
