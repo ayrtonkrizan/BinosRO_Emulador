@@ -9,7 +9,7 @@ prontera,141,195,4	script	Refinador	1_M_JOBGUIDER,{
 // Até quanto o Refinador pode refinar os itens?
 	set .@_ref_max,10;
 // O refinador pode diminuir a taxa de refinamento dos itens? 1=Sim / 0=Não
-	set .@_ref_dec,1;
+	set .@_ref_dec,0;
 // Não altere nada abaixo a não ser que saiba o que está fazendo.
 	mes "[ ^FF0000"+strnpcinfo(1)+"^000000 ]";
 	mes "Olá, "+strcharinfo(0)+". Como vai você? Veio em busca de meus serviços especiais?";

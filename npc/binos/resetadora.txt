@@ -1,5 +1,4 @@
-prontera,147,192,5	script	Resetadora	4_F_TELEPORTER,{
-
+-	script	Resetadora	-1,{
 	if(getgroupid() <1){
 		set .@ResetStat, 75000;	// Zeny requeridos para resetar atributos.
 		set .@ResetSkill,75000;	// Zeny requeridos para resetar habilidades.
@@ -56,3 +55,6 @@ prontera,147,192,5	script	Resetadora	4_F_TELEPORTER,{
 		close;
 	}
 }
+
+sec_in02,145,168,4	duplicate(Resetadora)	Resetadora#vip	4_F_TELEPORTER
+prontera,147,192,5	duplicate(Resetadora)	Resetadora#prt	4_F_TELEPORTER

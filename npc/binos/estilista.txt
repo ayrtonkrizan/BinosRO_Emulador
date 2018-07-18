@@ -8,15 +8,15 @@ prontera,169,179,3	script	[ Estilista ]	2_M_DYEINGER,{
 	
 	set .vip_needed, 1; //Nível necessário de VIP para acessar os recursos especias do NPC
 	
-	set .max_v_hstyle, 65; //Número máximo de estilos de cabelo para jogadores VIP
-	set .max_v_hcolor, 265; //Número máximo de cores de cabelo para jogadores VIP
-	set .max_v_ccolor, 559; //Número máximo de cores de roupa para jogadores VIP
+	set .max_v_hstyle, 37; //Número máximo de estilos de cabelo para jogadores VIP
+	set .max_v_hcolor, 250; //Número máximo de cores de cabelo para jogadores VIP
+	set .max_v_ccolor, 500; //Número máximo de cores de roupa para jogadores VIP
 	
 	set .novip_can_acess, 0; //Jogadores não-VIP poderão acessar os menus de salvamento e carregamento de estilos? (1 para sim, 0 para não)
 	
-	set .max_hstyle, 65; //Número máximo de estilos de cabelo para jogadores comuns
-	set .max_hcolor, 265; //Número máximo de cores de cabelo para jogadores comuns
-	set .max_ccolor, 559;	 //Número máximo de cores de roupa para jogadores comuns
+	set .max_hstyle, 37; //Número máximo de estilos de cabelo para jogadores comuns
+	set .max_hcolor, 250; //Número máximo de cores de cabelo para jogadores comuns
+	set .max_ccolor, 500;	 //Número máximo de cores de roupa para jogadores comuns
 	
 	//Número mínimo para estilos e cores para todos jogadores
 	set .min_hstyle, 0;
@@ -39,7 +39,7 @@ prontera,169,179,3	script	[ Estilista ]	2_M_DYEINGER,{
 		set @ccolor, getlook (7);
 		
 		if (.novip_can_acess == 0) {
-			if (getgmlevel () < .vip_needed) {
+			if (getgroupid () < .vip_needed) {
 				set .save_style$, "";
 				set .load_style$, "";
 			} else {
@@ -68,7 +68,7 @@ prontera,169,179,3	script	[ Estilista ]	2_M_DYEINGER,{
 		switch (select ("- Próximo.:- Anterior.:- Escolher número.:- Gostei deste.")) {
 			case 1: { //Próximo
 				if (.vip_needed > 0) {
-					if (getgmlevel () < .vip_needed) {
+					if (getgroupid () < .vip_needed) {
 						if (@hstyle >= .max_hstyle) {
 							mes .npcname$;
 							mes "Seu estilo de cabelo já é o último que possuo em meu catálogo.";
@@ -123,7 +123,7 @@ prontera,169,179,3	script	[ Estilista ]	2_M_DYEINGER,{
 			case 3: { //Escolher Número
 				mes .npcname$;
 				if (.vip_needed > 0) {
-					if (getgmlevel () < .vip_needed) {
+					if (getgroupid () < .vip_needed) {
 						mes "Escolha um número entre ^FF0000"+.min_hstyle+"^000000 e ^FF0000"+.max_hstyle+"^000000.";
 						next;
 						input @input,.min_hstyle,.max_hstyle;
@@ -172,7 +172,7 @@ prontera,169,179,3	script	[ Estilista ]	2_M_DYEINGER,{
 		switch (select ("- Próxima.:- Anterior.:- Escolher número.:- Gostei desta.")) {
 			case 1: { //Próxima
 				if (.vip_needed > 0) {
-					if (getgmlevel () < .vip_needed) {
+					if (getgroupid () < .vip_needed) {
 						if (@hcolor >= .max_hcolor) {
 							mes .npcname$;
 							mes "Sua cor de cabelo já é a última que possuo em meu catálogo.";
@@ -227,7 +227,7 @@ prontera,169,179,3	script	[ Estilista ]	2_M_DYEINGER,{
 			case 3: { //Escolher Número
 				mes .npcname$;
 				if (.vip_needed > 0) {
-					if (getgmlevel () < .vip_needed) {
+					if (getgroupid () < .vip_needed) {
 						mes "Escolha um número entre ^FF0000"+.min_hcolor+"^000000 e ^FF0000"+.max_hcolor+"^000000.";
 						next;
 						input @input,.min_hcolor,.max_hcolor;
@@ -276,7 +276,7 @@ prontera,169,179,3	script	[ Estilista ]	2_M_DYEINGER,{
 		switch (select ("- Próxima.:- Anterior.:- Escolher número.:- Gostei desta.")) {
 			case 1: { //Próxima
 				if (.vip_needed > 0) {
-					if (getgmlevel () < .vip_needed) {
+					if (getgroupid () < .vip_needed) {
 						if (@ccolor >= .max_ccolor) {
 							mes .npcname$;
 							mes "Sua cor de roupa já é a última que possuo em meu catálogo.";
@@ -331,7 +331,7 @@ prontera,169,179,3	script	[ Estilista ]	2_M_DYEINGER,{
 			case 3: { //Escolher Número
 				mes .npcname$;
 				if (.vip_needed > 0) {
-					if (getgmlevel () < .vip_needed) {
+					if (getgroupid () < .vip_needed) {
 						mes "Escolha um número entre ^FF0000"+.min_ccolor+"^000000 e ^FF0000"+.max_ccolor+"^000000.";
 						next;
 						input @input,.min_ccolor,.max_ccolor;
