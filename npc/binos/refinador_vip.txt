@@ -1,5 +1,5 @@
 sec_in02,143,168,5	script	Refinador VIP	2_M_OLDBLSMITH,{
-	if (getgmlevel() < 1)
+	if (getgroupid() < 1)
 	{
 		warp getsavepoint(0), getsavepoint(1), getsavepoint(2);
 		end;
