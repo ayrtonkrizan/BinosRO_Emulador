@@ -30,7 +30,7 @@ bat_room,57,227,5	script	Tenente Kalos	4_M_KY_KNT,{
 	end;
 
 OnInit:
-	waitingroom "Estação de Batalha",11,"start#bat_a01::OnReadyCheck",1,0,80;
+	waitingroom "Estação de Batalha",2,"start#bat_a01::OnReadyCheck",1,0,80;//Editar Essa linha com um a mais do que o necessário
 	end;
 
 OnEnterBG:
@@ -42,7 +42,7 @@ bat_room,58,204,1	script	Tenente Eyor	4_M_CRU_KNT,{
 	end;
 
 OnInit:
-	waitingroom "Estação de Batalha",11,"start#bat_a01::OnReadyCheck",1,0,80;
+	waitingroom "Estação de Batalha",2,"start#bat_a01::OnReadyCheck",1,0,80;
 	end;
 
 OnEnterBG:
@@ -139,7 +139,7 @@ OnReadyCheck:
 		donpcevent "#bat_a01_timer::OnStop";
 		end;
 	}
-	else if( .@Guillaume < 10 || .@Croix < 10 )
+	else if( .@Guillaume < 1 || .@Croix < 1 )//Editar Essa linha 
 		end;
 	$@TierraBG1 = 1;
 	donpcevent "Tenente Kalos::OnEnterBG";

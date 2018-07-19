@@ -1,7 +1,0 @@
--	script	Roleiro	-1,{
-	.@Title$ = "[Arlequim]";
-	mes "[Roleiro]";
-	mes .@Title$;
-	close;
-}
-prontera,155,174,4	duplicate(Roleiro)	Roleiro#1	4_BLACKDRAGON

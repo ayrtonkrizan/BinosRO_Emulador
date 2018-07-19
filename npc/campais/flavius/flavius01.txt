@@ -29,7 +29,7 @@
 bat_room,86,227,4	script	Tenente Ator	4_M_KY_KNT,{
 	end;
 OnInit:
-	waitingroom "Estação de Batalha",11,"start#bat_b01::OnReadyCheck",1,0,80;
+	waitingroom "Estação de Batalha",2,"start#bat_b01::OnReadyCheck",1,0,80;//Editar Essa linha com um a mais do que o necessário
 	end;
 OnEnterBG:
 	$@FlaviusBG1_id1 = waitingroom2bg("bat_b01",10,290,"start#bat_b01::OnGuillaumeQuit","");
@@ -39,7 +39,7 @@ OnEnterBG:
 bat_room,85,204,0	script	Tenente Thelokus	4_M_CRU_KNT,{
 	end;
 OnInit:
-	waitingroom "Estação de Batalha",11,"start#bat_b01::OnReadyCheck",1,0,80;
+	waitingroom "Estação de Batalha",2,"start#bat_b01::OnReadyCheck",1,0,80;//Editar Essa linha com um a mais do que o necessário
 	end;
 OnEnterBG:
 	$@FlaviusBG1_id2 = waitingroom2bg("bat_b01",390,10,"start#bat_b01::OnCroixQuit","");
@@ -91,7 +91,7 @@ OnReadyCheck:
 		donpcevent "#bat_b01_timer::OnStop";
 		end;
 	}
-	if( .@Guillaume < 10 || .@Croix < 10 )
+	if( .@Guillaume < 1 || .@Croix < 1 )//Editar Essa linha
 		end;
 	$@FlaviusBG1 = 1;
 	$@FlaviusBG1_Victory = 0;
