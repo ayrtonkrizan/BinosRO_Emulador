@@ -26,7 +26,7 @@ arena_room,115,71,0	warp	arn_room_5_1	1,1,arena_room,139,50
 arena_room,136,53,0	warp	arn_room_5_2	1,1,arena_room,113,74
 arena_room,123,88,0	warp	arn_room_3_1	1,1,arena_room,153,87
 arena_room,150,87,0	warp	arn_room_3_2	1,1,arena_room,120,87
-prt_are_in,54,13,0	warp	toarn_room	1,1,arena_room,100,77
+//prt_are_in,54,13,0	warp	toarn_room	1,1,arena_room,100,77
 
 // Acolyte Warps
 //============================================================

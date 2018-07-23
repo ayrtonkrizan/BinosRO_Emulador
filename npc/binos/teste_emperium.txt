@@ -1,7 +1,7 @@
-pvp_n_4-5	mapflag	restricted	7
+//pvp_n_4-5	mapflag	restricted	7
 pvp_n_4-5	mapflag	gvg_castle
 
-sec_in02,147,168,4	script	Emp Breaker Test	751,{
+sec_in02,147,168,4	script	Emp Breaker Test	4_M_GUILLOTINE,{
    	if (getgroupid() < 1)
 	{
 		warp getsavepoint(0), getsavepoint(1), getsavepoint(2);
