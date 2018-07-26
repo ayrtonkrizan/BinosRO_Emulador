@@ -1,4 +1,4 @@
 -	script	brAthenaMOTD	-1,{
-	message strcharinfo(0),"Bem-vindo ao BinosRO!";
+	message strcharinfo(0),"Bem-vindo ao BinosRO! O server que não é uma cilada";
 	end;
 }
